@@ -1,0 +1,30 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Project of digital library for primary school in Pieniezno.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bukowski-se/library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bukowski-se/library/issues"
+  },
+  "homepage": "https://github.com/bukowski-se/library#readme",
+  "dependencies": {
+    "@types/node": "^12.12.7",
+    "@types/react": "^16.9.11",
+    "express": "^4.17.1",
+    "react": "^16.11.0",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2"
+  }
+}
