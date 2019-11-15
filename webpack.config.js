@@ -1,12 +1,14 @@
 const path = require("path");
+
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
   mode: "development",
 
   entry: {
-    main: "./front-end/src/index.js"
+    main: "./front-end/src/index.tsx"
   },
 
   output: {
@@ -18,12 +20,22 @@ module.exports = {
     open: true,
     port: 9000
   },
+
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: "ts-loader"
       },
+
+      {
+        test: /\.(jpg|png|svg|gif)$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]"
+        }
+      },
+
       {
         test: /\.(scss|sass)$/,
         use: [
@@ -32,6 +44,7 @@ module.exports = {
           "sass-loader"
         ]
       },
+
       {
         test: /\.(js|jsx)$/,
         loader: "babel-loader",
@@ -43,6 +56,7 @@ module.exports = {
           ]
         }
       }
+
     ],
   },
 

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": false,
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "jsx": "react"
+  },
+  "include": [
+    "front-end/src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}
