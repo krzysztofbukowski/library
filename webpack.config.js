@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
 
   entry: {
-    main: "./front-end/src/App.js"
+    main: "./front-end/src/index.js"
   },
 
   output: {

@@ -1,9 +1,9 @@
 import React from "react";
 
-const Temp = () => {
+const App = () => {
   return (
     <h1>React works</h1>
   );
 };
 
-export default Temp;
+export default App;

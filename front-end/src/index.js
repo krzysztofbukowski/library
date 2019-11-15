@@ -3,9 +3,9 @@ import "./scss/main.scss";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Temp from "./components/Temp";
-
+import App from "./components/App";
+// const Element = () => <h2>fdsf</h2>
 ReactDOM.render(
-    <Temp />,
+    <App />,
     document.querySelector("#root")
-)
+);
