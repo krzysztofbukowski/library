@@ -5,20 +5,20 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: process.env.NODE_ENV,
 
   entry: {
     main: "./front-end/src/index.tsx"
   },
 
   output: {
-    filename: "[name].js",
+    filename: "[name].[contenthash:5].js",
     path: path.resolve(__dirname, "build")
   },
 
   devServer: {
     open: true,
-    port: 9000
+    port: process.env.WEBPACK_PORT || 9000
   },
 
   module: {
@@ -32,7 +32,7 @@ module.exports = {
         test: /\.(jpg|png|svg|gif)$/,
         loader: "file-loader",
         options: {
-          name: "[name].[ext]"
+          name: "[name].[contenthash:5].[ext]"
         }
       },
 
@@ -46,7 +46,7 @@ module.exports = {
       },
 
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(jsx?)$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
@@ -70,7 +70,7 @@ module.exports = {
     ),
     new MiniCssExtractPlugin(
       {
-        filename: "[name].css"
+        filename: "[name].[contenthash:5].css"
       }
     )
   ]

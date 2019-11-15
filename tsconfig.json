@@ -16,7 +16,7 @@
     "jsx": "react"
   },
   "include": [
-    "front-end/src/**/*.tsx"
+    "front-end/src/**/*"
   ],
   "exclude": [
     "node_modules",
