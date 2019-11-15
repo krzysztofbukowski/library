@@ -2,9 +2,10 @@
   "name": "library",
   "version": "0.1.0",
   "description": "Project of digital library for primary school in Pieniezno.",
-  "main": "index.js",
+  "main": "back-end/server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:server": "nodemon --exec ts-node . --watch back-end --ext ts,js,json",
+    "start:server": "ts-node ."
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,12 @@
     "@types/node": "^12.12.7",
     "express": "^4.17.1",
     "react": "^16.11.0",
+    "ts-node": "^8.5.0",
     "typescript": "^3.7.2"
   },
   "devDependencies": {
     "@types/react": "^16.9.11",
+    "nodemon": "^1.19.4",
     "webpack": "^4.41.2"
   }
 }
