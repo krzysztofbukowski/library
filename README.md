@@ -16,5 +16,5 @@ The API is built using nodejs and typescript and the source code is available un
 
 Running the API
 
-#### watch:server - Run the server and automatically reload on every code change
-#### start:server - Run the server
+#### `watch:server` - Run the server and automatically reload on every code change
+#### `start:server` - Run the server
