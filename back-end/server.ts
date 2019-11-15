@@ -8,4 +8,4 @@ const version = require('../package.json').version;
 
 app.use('/api', api(startTime, version));
 
-app.listen(port, () => console.info(`Server listening on port ${port}!`))
+app.listen(port, () => console.info(`Server listening on port ${port}!`));
