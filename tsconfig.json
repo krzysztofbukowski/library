@@ -1,9 +1,24 @@
 {
-    "compilerOptions": {
-        "resolveJsonModule": true,
-        "esModuleInterop": true
-    },
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": false,
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "jsx": "react"
+  },
+  "include": [
+    "front-end/src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+  ]
 }
