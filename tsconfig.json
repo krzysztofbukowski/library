@@ -9,16 +9,10 @@
     "removeComments": true,
     "resolveJsonModule": true,
     "esModuleInterop": false,
-    "lib": [
-      "es7",
-      "dom"
-    ],
-    "jsx": "react"
+    "lib": ["es7", "dom"],
+    "jsx": "react",
+    "noImplicitAny": true
   },
-  "include": [
-    "front-end/src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-  ]
+  "include": ["front-end/src/**/*", "back-end/src/**/*"],
+  "exclude": ["node_modules"]
 }

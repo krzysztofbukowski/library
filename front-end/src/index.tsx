@@ -1,11 +1,8 @@
-import "./scss/main.scss";
+import './scss/main.scss';
 
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-import App from "./components/App.tsx";
+import App from './components/App';
 
-ReactDOM.render(
-    <App />,
-    document.querySelector("#root")
-);
+ReactDOM.render(<App />, document.querySelector('#root'));
