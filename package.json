@@ -6,8 +6,6 @@
   "scripts": {
     "lint": "eslint --ext tsx --ext ts front-end back-end",
     "lint:fix": "eslint --fix --ext tsx --ext ts front-end back-end",
-    "format": "prettier --write \"{.,back-end,front-end}/**/*.{ts,tsx,json}\"",
-    "qc:fix": "run-s lint:fix format",
     "start": "webpack-dev-server",
     "build": "webpack",
     "watch:server": "nodemon --exec ts-node . --watch back-end --ext ts,js,json",
