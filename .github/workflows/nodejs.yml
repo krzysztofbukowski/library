@@ -1,0 +1,19 @@
+name: Code quality
+
+on: [pull_request]
+
+jobs:
+ qc:
+   runs-on: ubuntu-latest
+   steps:
+   - uses: actions/checkout@v1
+   - name: Use Node.js 
+     uses: actions/setup-node@v1
+     with:
+       node-version: ${{ matrix.node-version }}
+   - name: npm install and lint
+     run: |
+       npm ci
+       npm run lint
+     env:
+       CI: true
