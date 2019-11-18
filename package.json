@@ -2,10 +2,12 @@
   "name": "library",
   "version": "0.1.0",
   "description": "Project of digital library for primary school in Pieniezno.",
-  "main": "index.js",
+  "main": "back-end/server.ts",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "watch:server": "nodemon --exec ts-node . --watch back-end --ext ts,js,json",
+    "start:server": "ts-node ."
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "express": "^4.17.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "ts-node": "^8.5.0",
     "typescript": "^3.7.2"
   },
   "devDependencies": {
@@ -41,8 +44,9 @@
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "ts-loader": "^6.2.1",
-    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0",
+    "nodemon": "^1.19.4",
+    "webpack": "^4.41.2"
   }
 }
