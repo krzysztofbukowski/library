@@ -10,6 +10,10 @@ module.exports = {
   entry: {
     main: "./front-end/src/index.tsx"
   },
+  
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
+  },
 
   output: {
     filename: "[name].[contenthash:5].js",
