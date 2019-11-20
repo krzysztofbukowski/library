@@ -31,6 +31,25 @@ module.exports = {
         test: /\.tsx?$/,
         use: "ts-loader"
       },
+       {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 0,
+              modules: {
+                context: path.resolve(__dirname, 'src/componentsy'),
+                mode: "local",
+                localIdentName: "[name]__[local]"
+              }
+            }
+          },
+          "sass-loader",
+        ]
+      },
 
       {
         test: /\.(jpg|png|svg|gif)$/,
@@ -39,15 +58,14 @@ module.exports = {
           name: "[name].[contenthash:5].[ext]"
         }
       },
-
-      {
-        test: /\.(scss|sass)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader", 
-          "sass-loader"
-        ]
-      },
+      // {
+      //   test: /\.(scss|sass)$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     "css-loader", 
+      //     
+      //   ]
+      // },
 
       {
         test: /\.(jsx?)$/,

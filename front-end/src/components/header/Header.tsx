@@ -1,15 +1,14 @@
 import * as React from "react";
 
-import "./_header.scss";
-
-import Search from "./Search";
+import * as styles from "./header.scss";
+import Search from "../Search/Search"
 
 const Header = () => (
-  <div className="header">
-    <div className="header__title-box">
-      <h6 className="header__title">Biblioteka Szkoły Podstawowej w Pieniężnie</h6>
+  <div className={styles.header}>
+    <div className={styles.titleBox}>
+      <h6 className={styles.title}>Biblioteka Szkoły Podstawowej w Pieniężnie</h6>
     </div>
-    <div className="header__search-box">
+    <div className={styles.searchBox}>
       <Search />
     </div>
   </div>

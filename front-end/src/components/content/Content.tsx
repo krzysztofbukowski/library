@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import "./_content.scss";
+import * as styles from "./Content.scss";
 
 const Content = () => (
   <main>
-    <div className="content">
+    <div className={styles.content}>
     </div>
   </main>
 )
