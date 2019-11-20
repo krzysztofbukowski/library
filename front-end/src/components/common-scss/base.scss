@@ -1,4 +1,4 @@
-@import "./_variables";
+@import "./variables";
 
 * {
   font-family: sans-serif;
@@ -11,11 +11,10 @@ body {
 }
 
 .container {
-  @media screen and (min-width: 1500px) {
-    max-width: 1500px;
+  @media screen and (min-width: 1500px) {  //These media queries are temp.
+    max-width: 1800px;
   }
+  width: 100%;
   max-width: 1000px;
-  height: 100vh;
   margin: 0 auto;
-  
 }

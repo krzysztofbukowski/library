@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import "../scss/base.scss";
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import Content from "./Content.jsx";
+import "./common-scss/base.scss";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
+import Content from "./content/Content";
 
 class App extends React.Component {
   render(){
@@ -14,7 +14,7 @@ class App extends React.Component {
         <Footer />
       </div>
     )
-  }
-}
-export default App;
+  };
+};
 
+export default App;
