@@ -1,12 +1,12 @@
 [
-    {
-        "_id": "1",
-        "title": "W pustyni i w puszczy",
-        "author": "Henryk Sienkiewicz"
-    },
-    {
-        "_id": "2",
-        "title": "Pan Tadeusz",
-        "author": "Adam Mickiewicz"
-    }    
+  {
+    "_id": "1",
+    "title": "W pustyni i w puszczy",
+    "author": "Henryk Sienkiewicz"
+  },
+  {
+    "_id": "2",
+    "title": "Pan Tadeusz",
+    "author": "Adam Mickiewicz"
+  }
 ]
