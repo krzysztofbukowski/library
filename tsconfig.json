@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "commonjs",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -10,7 +10,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": false,
     "lib": [
-      "es7",
+      "esnext",
       "dom"
     ],
     "jsx": "react"

@@ -1,13 +1,13 @@
-@import "../../common-scss/variables";
+@import "../../scss/variables";
 
 .header {
-  background: #222222;
+  background: $black;
   display: flex;
   justify-content: flex-end;
+  color: $secondary-text-color;
 }
 
 .title {
-  color: white;
   font-size: $font-size;
   margin: 15px 0; 
   &Box {

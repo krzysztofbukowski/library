@@ -3,8 +3,9 @@ import * as React from "react";
 import * as styles from "./Footer.scss";
 
 const Footer = () => (
-  <footer>
-    <div className={styles.footer}>
+  <footer className={styles.footer}>
+    <div className="container">
+      Tu będą link
     </div>
   </footer>
 )

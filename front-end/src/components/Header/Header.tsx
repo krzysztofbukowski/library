@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import * as styles from "./header.scss";
+import * as styles from "./Header.scss";
 import Search from "../Search/Search"
 
 const Header = () => (
