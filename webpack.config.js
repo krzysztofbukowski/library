@@ -1,14 +1,15 @@
-const path = require("path");
+/* eslint-disable */
+const path = require('path');
 
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV,
 
   entry: {
-    main: "./front-end/src/index.tsx"
+    main: './front-end/src/index.tsx',
   },
 
   resolve: {
@@ -16,42 +17,23 @@ module.exports = {
   },
 
   output: {
-    filename: "[name].[contenthash:5].js",
-    path: path.resolve(__dirname, "build")
+    filename: '[name].[contenthash:5].js',
+    path: path.resolve(__dirname, 'build'),
   },
 
   devServer: {
     open: true,
-    port: process.env.WEBPACK_PORT || 9000
+    port: process.env.WEBPACK_PORT || 9000,
   },
 
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-              importLoaders: 0,
-              modules: {
-                mode: "local",
-                localIdentName: "[name]__[local]"
-              }
-            }
-          },
-          "sass-loader"
-        ]
-      },
-
-      {
         test: /\.(jpg|png|svg|gif)$/,
-        loader: "file-loader",
+        loader: 'file-loader',
         options: {
-          name: "[name].[contenthash:5].[ext]"
-        }
+          name: '[name].[contenthash:5].[ext]',
+        },
       },
 
       {
@@ -72,11 +54,11 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
-      title: "test",
-      template: "front-end/index.html"
+      title: 'test',
+      template: 'front-end/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash:5].css"
-    })
-  ]
+      filename: '[name].[contenthash:5].css',
+    }),
+  ],
 };

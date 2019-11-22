@@ -15,10 +15,6 @@
     ],
     "jsx": "react"
   },
-  "include": [
-    "front-end/src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-  ]
+  "include": ["front-end/src/**/*", "back-end/src/**/*"],
+  "exclude": ["node_modules"]
 }
