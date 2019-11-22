@@ -13,7 +13,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+    extensions: ['.ts', '.tsx', '.js'],
   },
 
   output: {
@@ -29,6 +29,25 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 0,
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]',
+              },
+            },
+          },
+          'sass-loader',
+        ],
+      },
+
+      {
         test: /\.(jpg|png|svg|gif)$/,
         loader: 'file-loader',
         options: {
@@ -38,17 +57,17 @@ module.exports = {
 
       {
         test: /\.(tsx?)$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
           presets: [
-            "@babel/preset-env",
-            "@babel/preset-react",
-            "@babel/preset-typescript"
-          ]
-        }
-      }
-    ]
+            '@babel/preset-env',
+            '@babel/preset-react',
+            '@babel/preset-typescript',
+          ],
+        },
+      },
+    ],
   },
 
   plugins: [
