@@ -1,7 +1,21 @@
 import * as React from 'react';
 
-const App: React.FC = () => {
-  return <h1>Mikus</h1>;
-};
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import Content from './Content/Content';
+
+class App extends React.Component {
+  render(): JSX.Element {
+    return (
+      <>
+        <Header />
+        <div className="container">
+          <Content />
+        </div>
+        <Footer />
+      </>
+    );
+  }
+}
 
 export default App;

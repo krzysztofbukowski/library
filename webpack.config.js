@@ -12,6 +12,10 @@ module.exports = {
     main: './front-end/src/index.tsx',
   },
 
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+  },
+
   output: {
     filename: '[name].[contenthash:5].js',
     path: path.resolve(__dirname, 'build'),
@@ -25,8 +29,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 0,
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]',
+              },
+            },
+          },
+          'sass-loader',
+        ],
       },
 
       {
@@ -38,16 +56,15 @@ module.exports = {
       },
 
       {
-        test: /\.(scss|sass)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-
-      {
-        test: /\.(jsx?)$/,
+        test: /\.(tsx?)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react',
+            '@babel/preset-typescript',
+          ],
         },
       },
     ],
