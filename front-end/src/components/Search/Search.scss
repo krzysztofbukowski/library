@@ -1,9 +1,22 @@
+@import "../../scss/variables";
+
 .search {
   width: 270px;
   height: 30px;
-  background: #191919;
   border: none;
   outline: none;
   padding-left: 5px;
-  color: white;
+  font-size: $font-size;
+}
+
+.input {
+  &Select {
+    background: none;
+    border: none;
+    border-right: 1px solid $second-black;
+    font-size: $font-size;
+    color: $second-black;
+    outline: none;
+    margin-right: 15px;
+  }
 }
