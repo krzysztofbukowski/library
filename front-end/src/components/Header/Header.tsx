@@ -1,18 +1,16 @@
 import * as React from 'react';
 
+import logo from "./images/logo.svg";
 import * as styles from './Header.scss';
 import Search from '../Search/Search';
 
-const Header: React.FC = () => (
+const Header = () => (
   <div className={styles.header}>
-    <div className={styles.titleBox}>
-      <h6 className={styles.title}>
-        Biblioteka Szkoły Podstawowej w Pieniężnie
-      </h6>
-    </div>
-    <div className={styles.searchBox}>
-      <Search />
-    </div>
+      <div className="container">
+        <img src={logo} alt=""/>
+          Biblioteka Szkoły Podstawowej w Pieniężnie
+        <Search /> 
+      </div>
   </div>
 );
 

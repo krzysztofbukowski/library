@@ -5,7 +5,7 @@ import Footer from './Footer/Footer';
 import Content from './Content/Content';
 
 class App extends React.Component {
-  render(): JSX.Element {
+  render () {
     return (
       <>
         <Header />

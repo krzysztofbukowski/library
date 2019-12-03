@@ -4,16 +4,11 @@
   background: $black;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   color: $secondary-text-color;
+  height: 100px;
 }
 
-.title {
-  font-size: $font-size;
-  margin: 15px 0; 
-  &Box {
-    flex-basis: 50%;
-  }
-}
 
  .searchBox {
   width: 350px;

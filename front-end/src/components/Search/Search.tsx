@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import * as styles from './Search.scss';
 
-const Search: React.FC = () => (
+const Search = () => (
   <input
     className={styles.search}
     type="text"
