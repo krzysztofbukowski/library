@@ -1,0 +1,18 @@
+@import "../../scss/variables";
+
+.logo {
+  &Box {
+    display: flex;
+    margin: 16px 0;
+  } 
+  &Desc {
+    font-size: 13px;
+    width: 120px;
+    height: 48px;
+    margin-left: 10px;
+  }
+  &Img {
+    width: 40px;
+    height: 50px;
+  } 
+}

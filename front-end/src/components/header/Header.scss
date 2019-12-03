@@ -1,24 +1,27 @@
 @import "../../scss/variables";
 
 .header {
-  background: $black;
-  display: flex;
-  justify-content: flex-end;
-  color: $secondary-text-color;
-}
-
-.title {
-  font-size: $font-size;
-  margin: 15px 0; 
+  background: $white;
+  color: $second-black;
+  padding: 16px 0;
   &Box {
-    flex-basis: 50%;
+    align-items: center;
+    display: flex;
   }
 }
 
- .searchBox {
-  width: 350px;
-  display: flex;
-  align-items: center;
-  font-size: $font-size;
+.logo {
+  &Desc{
+    font-size: 13px;
+    width: 120px;
+    height: 48px;
+    margin-left: 10px;
+  }
 }
 
+.input {
+  &Box {
+    flex: 1;
+    text-align: right;
+  }
+}
