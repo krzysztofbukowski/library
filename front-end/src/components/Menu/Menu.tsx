@@ -4,7 +4,7 @@ import style from "./Menu.scss";
 
 const Menu = () => (
   <span>
-    <i class={` ${style.icon} fas fa-hamburger`}></i>
+    <i class={`${style.icon} fas fa-hamburger`}></i>
   </span>
 );
 
