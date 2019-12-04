@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import * as styles from './Search.scss';
 
-const Search = () => (
+const Search: React.FC = () => (
   <>
     <select className={styles.inputSelect} name="" id="">
       <option value="">Wszystkie kategorie</option>

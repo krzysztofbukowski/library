@@ -7,7 +7,7 @@ import Search from '../Search';
 
 import logo from "../../assets/logo.svg";
 
-const Header = () => (
+const Header: React.FC = () => (
   <div className={styles.header}>
     <div className={`container ${styles.headerBox}`}>
     <div className={styles.logoBox}>
