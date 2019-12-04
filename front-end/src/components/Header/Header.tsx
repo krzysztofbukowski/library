@@ -16,7 +16,7 @@ const Header: React.FC = () => (
           Biblioteka Szkoły Podstawowej w Pieniężnie
         </div>
       </div>
-      <div className={styles.SearchBox}>
+      <div className={styles.searchBox}>
         <Search />
       </div>
       <label>
