@@ -3,4 +3,18 @@
 .content {
   height: 1000px;
   background: rgb(199, 197, 197); // Temp color of background
+  display: flex;
+}
+
+.popularBooks {
+  width: 895px;
+  height: 100%;
+  background:red; 
+}
+
+.lists {
+  width: 290px;
+  height: 100%;
+  background: orange;
+  margin-left: $small-spacing;
 }
