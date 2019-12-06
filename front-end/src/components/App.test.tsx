@@ -6,7 +6,6 @@ describe('App', () => {
   it('Should render without failure', () => {
     const component = render(<App />);
 
-    component.debug();
     component.getByText('Biblioteka Szkoły Podstawowej w Pieniężnie');
   });
 });
