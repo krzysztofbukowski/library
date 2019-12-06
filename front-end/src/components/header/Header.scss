@@ -1,12 +1,13 @@
 @import "../../scss/variables";
 
 .header {
-  background: $white;
-  color: $black;
+  background: $color-white;
+  color: $color-black;
   padding: 16px 0;
   &Box {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
   }
 }
 

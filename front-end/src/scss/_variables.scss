@@ -1,11 +1,17 @@
 // colors
-$black: #343434;
-$white: #eeeeee;
+$color-black: #343434;
+$color-white: #eeeeee;
 
-$main-color: $black;
-$primary-text-color: $black;
-$secondary-text-color: $white;
+$color-main: #F1F5F8;
+$color-primary-text: $color-black;
+$color-secondary-text: $color-white;
 
 $font-size: 18px;
 
+$spacing-small: 24px;
+$spacing-medium: 48px;
+$spacing-large: 72px;
+
 $content-width: 1200px;
+$aside-width: 282px;
+$main-width: 894px;
