@@ -9,14 +9,14 @@
 .main {
   width: 895px;
   height: 1000px;
-  background:red; 
+  background: $main-color; 
   min-width: 288px;
 }
 
 .aside {
   flex: 1;
   height: 1000px;
-  background: orange;
+  background: $main-color;
   margin-left: $small-spacing;
   @media screen and (max-width: 1200px){
     margin-left: 0;
