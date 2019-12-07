@@ -7,19 +7,14 @@ import ListItem from './ListItem';
 import Data from '../../Data/Data';
 
 const showData = Data.map(element => (
-    <ListItem
-      id={element.id}
-      key={element.id}
-      title={element.title}
-      author={element.author}
-    />
-  )
-);
+  <ListItem
+    id={element.id}
+    key={element.id}
+    title={element.title}
+    author={element.author}
+  />
+));
 
-const List: React.FC = () => (
-  <ul className={styles.list}>
-    {showData}
-  </ul>
-);
+const List: React.FC = () => <ul className={styles.list}>{showData}</ul>;
 
 export default List;
