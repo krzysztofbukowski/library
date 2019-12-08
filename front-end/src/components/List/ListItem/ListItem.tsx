@@ -2,13 +2,13 @@ import * as React from 'react';
 
 import * as styles from './ListItem.scss';
 
-interface ListProps {
+interface ListItemProps {
   id: number;
   title: string;
   author: string;
 }
 
-const ListItem: React.SFC = (props: ListProps) => (
+const ListItem: React.SFC = (props: ListItemProps) => (
   <li className={styles.listItem}>
     {props.title}
     {props.author}
