@@ -7,9 +7,8 @@ import List from '../List';
 import books from '../../MockData/Books';
 import readers from '../../MockData/Readers';
 
-import Book from "../../models/Book";
-import Reader from "../../models/Reader";
-
+import Book from '../../models/Book';
+import Reader from '../../models/Reader';
 
 const Content: React.FC = () => (
   <>

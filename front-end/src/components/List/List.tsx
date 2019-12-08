@@ -9,10 +9,10 @@ interface OwnProps<T> {
 
 function List<T>(props: OwnProps<T>): JSX.Element {
   return (
-    <ul className = {styles.list}>
+    <ul className={styles.list}>
       {props.items.map(element => props.render(element))}
     </ul>
   );
-};
+}
 
 export default List;
