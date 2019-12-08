@@ -4,8 +4,12 @@ import * as styles from './Content.scss';
 
 import List from '../List';
 
-import Books from '../../MockData/Books';
-import Readers from '../../MockData/Readers';
+import books from '../../MockData/Books';
+import readers from '../../MockData/Readers';
+
+import Book from "../../models/Book";
+import Reader from "../../models/Reader";
+
 
 const Content: React.FC = () => (
   <>
@@ -13,8 +17,24 @@ const Content: React.FC = () => (
       <div className={styles.content}></div>
     </main>
     <aside className={styles.aside}>
-      <List data={Books} />
-      <List data={Readers} />
+      <List<Book>
+        items={books}
+        render={(element: Book): JSX.Element => (
+          <li>
+            {element.title}
+            {element.author}
+          </li>
+        )}
+      />
+      <List<Reader>
+        items={readers}
+        render={(element: Reader): JSX.Element => (
+          <li>
+            {element.name}
+            {element.lastname}
+          </li>
+        )}
+      />
     </aside>
   </>
 );

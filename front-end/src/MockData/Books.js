@@ -1,4 +1,4 @@
-const Data = [
+const books = [
   {id: 1, title: "Ksiazka1", author: "Autor1", cover: "obrazek1"},
   {id: 2, title: "Ksiazka2", author: "Autor2", cover: "obrazek2"},
   {id: 3, title: "Ksiazka3", author: "Autor3", cover: "obrazek3"},
@@ -10,4 +10,4 @@ const Data = [
   {id: 9, title: "Ksiazka9", author: "Autor9", cover: "obrazek9"}
 ]
 
-export default Data;
+export default books;

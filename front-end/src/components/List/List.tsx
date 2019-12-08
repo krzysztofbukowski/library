@@ -2,18 +2,17 @@ import * as React from 'react';
 
 import * as styles from './List.scss';
 
-import ListItem from './ListItem';
+interface OwnProps<T> {
+  items: T[];
+  render: (element: {}) => JSX.Element;
+}
 
-const List: React.FC = props => (
-  <ul className={styles.list}>
-    {props.data.map(element => (
-      <ListItem
-        id={element.id}
-        key={element.id}
-        title={element.title}
-        author={element.author}
-      />
-    ))}
-  </ul>
-);
+function List<T>(props: OwnProps<T>): JSX.Element {
+  return (
+    <ul className = {styles.list}>
+      {props.items.map(element => props.render(element))}
+    </ul>
+  );
+};
+
 export default List;
