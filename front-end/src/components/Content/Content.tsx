@@ -4,11 +4,11 @@ import * as styles from './Content.scss';
 
 import List from '../List';
 
-import books from '../../MockData/books';
-import readers from '../../MockData/readers';
-
 import Book from '../../models/Book';
 import Reader from '../../models/Reader';
+
+import books from '../../MockData/books';
+import readers from '../../MockData/readers';
 
 const Content: React.FC = () => (
   <>

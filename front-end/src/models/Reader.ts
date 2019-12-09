@@ -1,4 +1,4 @@
-export default interface Book {
+export default interface Reader {
   id: string;
   name: string;
   lastname: string;
