@@ -10,6 +10,9 @@ import Reader from '../../models/Reader';
 import books from '../../MockData/books';
 import readers from '../../MockData/readers';
 
+import ListItemBook from '../List/ListItem/ListItemBook';
+import ListItemReader from '../List/ListItem/ListItemReader';
+
 const Content: React.FC = () => (
   <>
     <main className={styles.main}>
@@ -19,19 +22,23 @@ const Content: React.FC = () => (
       <List<Book>
         items={books}
         render={(book: Book): JSX.Element => (
-          <li>
-            {book.title}
-            {book.author}
-          </li>
+          <ListItemBook
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            author={book.author}
+          />
         )}
       />
       <List<Reader>
         items={readers}
         render={(reader: Reader): JSX.Element => (
-          <li>
-            {reader.name}
-            {reader.lastname}
-          </li>
+          <ListItemReader
+            key={reader.id}
+            id={reader.id}
+            name={reader.name}
+            lastname={reader.lastname}
+          />
         )}
       />
     </aside>
