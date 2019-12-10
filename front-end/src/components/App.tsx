@@ -8,7 +8,7 @@ import Footer from './Footer';
 class App extends React.Component {
   render(): JSX.Element {
     return (
-      <div className="tempName">
+      <div>
         <Header />
         <Carousel />
         <div className="container">

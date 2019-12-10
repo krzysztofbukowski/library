@@ -10,7 +10,6 @@ import Reader from '../../models/Reader';
 import books from '../../MockData/books';
 import readers from '../../MockData/readers';
 
-import BookListItem from '../List/ListItem/BookListItem';
 import ReaderListItem from '../List/ListItem/ReaderListItem';
 import BookItemReader from '../List/ListItem/BookListItem';
 
@@ -21,19 +20,19 @@ const Content: React.FC = () => (
     </main>
     <aside className={styles.aside}>
       <List<Reader>
-        listName="Top czytelnicy"
+        title="Top czytelnicy"
         items={readers}
         render={(reader: Reader): JSX.Element => (
           <ReaderListItem
             key={reader.id}
             id={reader.id}
-            name={reader.name}
+            firstname={reader.name}
             lastname={reader.lastname}
           />
         )}
       />
       <List<Book>
-        listName="Najnowsze książki"
+        title="Najnowsze książki"
         items={books}
         render={(book: Book): JSX.Element => (
           <BookItemReader
@@ -41,6 +40,7 @@ const Content: React.FC = () => (
             id={book.id}
             title={book.title}
             author={book.author}
+            imgpath={book.cover}
           />
         )}
       />

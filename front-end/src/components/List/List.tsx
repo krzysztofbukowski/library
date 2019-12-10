@@ -4,14 +4,14 @@ import * as styles from './List.scss';
 
 interface OwnProps<T> {
   items: T[];
-  listName: string;
+  title: string;
   render: (element: {}) => JSX.Element;
 }
 
 function List<T>(props: OwnProps<T>): JSX.Element {
   return (
     <ul className={styles.list}>
-      <div className={styles.listHeader}>{props.listName}</div>
+      <h3 className={styles.listHeader}>{props.title}</h3>
       {props.items.map(element => props.render(element))}
     </ul>
   );

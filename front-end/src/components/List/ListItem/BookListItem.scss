@@ -1,25 +1,26 @@
-@import "../../../scss/variables";
+@import "./../../../scss/variables";
 
 .bookListItem {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: left;
   margin-bottom: 15px;
+  align-items: center;
+  overflow: hidden;
 }
 
 .cover {
-  width: 37px;
+  box-shadow: $shadow; 
+}
+
+.photo {
+  min-width: 37px;
   height: 55px;
-  background: $color-black;
-  box-shadow: 0px 0px 6px #00000066; 
 }
 
 .text{
-  padding-left: 11px;
+  padding-left: $spacing-x1;
+  flex-basis: 100%;
 }
 
 .title {
   font-weight: bold;
-  margin-bottom: 5px;
 }

@@ -4,7 +4,7 @@ import styles from './ReaderListItem.scss';
 
 interface OwnProps {
   id: string;
-  name: string;
+  firstname: string;
   lastname: string;
 }
 
@@ -12,7 +12,7 @@ function ReaderListItem(props: OwnProps): JSX.Element {
   return (
     <>
       <li>
-        {props.name}
+        {props.firstname}
         {props.lastname}
       </li>
     </>

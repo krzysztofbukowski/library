@@ -3,7 +3,7 @@
 .list {
   list-style-type: none;
   &Header {
-    margin-bottom: 22px;
+    margin-bottom: $spacing-x2;
     font-weight: bold;
   }
 }
