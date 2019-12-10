@@ -2,4 +2,8 @@
 
 .list {
   list-style-type: none;
+  &Header {
+    margin-bottom: 22px;
+    font-weight: bold;
+  }
 }

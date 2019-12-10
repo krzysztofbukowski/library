@@ -1,12 +1,14 @@
 import * as React from 'react';
 
+import styles from './ReaderListItem.scss';
+
 interface OwnProps {
   id: string;
   name: string;
   lastname: string;
 }
 
-function ListItemReader(props: OwnProps): JSX.Element {
+function ReaderListItem(props: OwnProps): JSX.Element {
   return (
     <>
       <li>
@@ -17,4 +19,4 @@ function ListItemReader(props: OwnProps): JSX.Element {
   );
 }
 
-export default ListItemReader;
+export default ReaderListItem;
