@@ -13,6 +13,8 @@ import readers from '../../MockData/readers';
 import ReaderListItem from '../List/ListItem/ReaderListItem';
 import BookItemReader from '../List/ListItem/BookListItem';
 
+import img from '../../assets/images/avatar.png';
+
 const Content: React.FC = () => (
   <>
     <main className={styles.main}>
@@ -40,7 +42,7 @@ const Content: React.FC = () => (
             id={book.id}
             title={book.title}
             author={book.author}
-            imgpath={book.cover}
+            imgpath={img}
           />
         )}
       />

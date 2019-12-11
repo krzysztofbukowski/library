@@ -23,19 +23,21 @@
   }
 }
 
-h3 {
-  font-size: $font-size;
-}
-
-h2 {
-  font-size: $font-size * 2;
-}
-
-h1 {
-  font-size: $font-size * 3;
-}
-
 ul {
   margin: 0;
   padding: 0;
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1em;
+  margin-bottom: $spacing-x2;
 }

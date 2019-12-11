@@ -4,23 +4,29 @@
   display: flex;
   margin-bottom: 15px;
   align-items: center;
-  overflow: hidden;
 }
 
 .cover {
-  box-shadow: $shadow; 
-}
-
-.photo {
-  min-width: 37px;
+  width: 37px;
   height: 55px;
+  box-shadow: $shadow; 
 }
 
 .text{
   padding-left: $spacing-x1;
-  flex-basis: 100%;
+  max-width: 245px;
+}
+
+@mixin overflowed {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .title {
   font-weight: bold;
+  @include overflowed;
+}
+
+.author {
+  @include overflowed;
 }

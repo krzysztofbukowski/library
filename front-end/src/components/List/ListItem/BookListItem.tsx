@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import styles from './BookListItem.scss';
 
-import photo from '../../../MockData/MockImages/avatar.png';
-
 interface OwnProps {
   id: string;
   title: string;
@@ -15,9 +13,7 @@ function BookItemReader(props: OwnProps): JSX.Element {
   return (
     <li>
       <div className={styles.bookListItem}>
-        <div className={styles.cover}>
-          <img className={styles.photo} src={photo} alt="" />
-        </div>
+        <img className={styles.cover} src={props.imgpath} alt="" />
         <div className={styles.text}>
           <div className={styles.title}>{props.title}</div>
           <div className={styles.author}>{props.author}</div>

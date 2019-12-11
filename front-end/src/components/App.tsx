@@ -8,14 +8,14 @@ import Footer from './Footer';
 class App extends React.Component {
   render(): JSX.Element {
     return (
-      <div>
+      <>
         <Header />
         <Carousel />
         <div className="container">
           <Content />
         </div>
         <Footer />
-      </div>
+      </>
     );
   }
 }
