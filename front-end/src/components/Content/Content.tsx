@@ -30,6 +30,7 @@ const Content: React.FC = () => (
             id={reader.id}
             firstname={reader.name}
             lastname={reader.lastname}
+            avatarimg={img}
           />
         )}
       />
@@ -42,7 +43,7 @@ const Content: React.FC = () => (
             id={book.id}
             title={book.title}
             author={book.author}
-            imgpath={img}
+            coverimg={img}
           />
         )}
       />

@@ -6,16 +6,18 @@ interface OwnProps {
   id: string;
   firstname: string;
   lastname: string;
+  avatarimg?: string;
 }
 
 function ReaderListItem(props: OwnProps): JSX.Element {
   return (
-    <>
-      <li>
-        {props.firstname}
-        {props.lastname}
-      </li>
-    </>
+    <li>
+      <div className={styles.readerListItem}>
+        <img className={styles.avatarImg} src={props.avatarimg} alt="" />
+        <div
+          className={styles.text}>{`${props.firstname} ${props.lastname}`}</div>
+      </div>
+    </li>
   );
 }
 

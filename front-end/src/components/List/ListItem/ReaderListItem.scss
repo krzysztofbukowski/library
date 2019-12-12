@@ -1,1 +1,24 @@
 @import "./../../../scss/variables";
+
+.readerListItem {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.text {
+  padding-left: $spacing-x1;
+  font-weight: bold;
+  max-width: 245px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.avatar { 
+  &Img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: $shadow;
+  }
+}
