@@ -1,5 +1,7 @@
 @import "./../../../scss/variables";
 
+@import "../../../scss/utils.scss";
+
 .bookListItem {
   display: flex;
   margin-bottom: 15px;
@@ -15,12 +17,6 @@
 .text{
   padding-left: $spacing-x1;
   max-width: 245px;
-}
-
-@mixin overflowed {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-transform: capitalize;
 }
 
 .title {
