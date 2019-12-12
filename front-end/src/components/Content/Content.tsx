@@ -43,7 +43,7 @@ const Content: React.FC = () => (
             id={book.id}
             title={book.title}
             author={book.author}
-            coverimg={img}
+            coverimg="https://www.swiatksiazki.pl/media/catalog/product/cache/a946e6dbdb55333e1c3d566a3e38b923/7/2/7299906600872.jpg"
           />
         )}
       />

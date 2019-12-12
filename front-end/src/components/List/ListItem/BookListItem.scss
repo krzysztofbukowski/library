@@ -24,5 +24,6 @@
 }
 
 .author {
+  font-size: $font-small;
   @include overflowed;
 }

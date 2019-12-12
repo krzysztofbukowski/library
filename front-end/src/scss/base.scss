@@ -1,8 +1,9 @@
-@import "./variables";
+@import './variables';
+@import './fonts';
 
 :global {
   * {
-    font-family: "Lato", sans-serif;
+    font-family: 'Open sans', sans-serif;
     box-sizing: border-box;
   }
 
@@ -27,17 +28,5 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-h1 {
-  font-size: 3em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1em;
-  margin-bottom: $spacing-x2;
+  margin-bottom: $spacing-x4;
 }
