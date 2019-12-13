@@ -1,13 +1,8 @@
 @import "../../scss/variables";
 
 .main {
-  background: rgb(199, 197, 197); // Temp color of background
-}
-
-.main {
   width: 100%;
   height: 1000px;
-  background: rgb(88, 88, 45); 
   @media screen and (min-width: $content-width) {
     max-width: $main-width;
   } 
@@ -16,9 +11,8 @@
 .aside {
   width: 100%;
   height: 1000px;
-  background: rgb(156, 125, 125);
   @media screen and (min-width: $content-width){
     max-width: $aside-width;
-    margin-left: $spacing-small;
+    margin-left: $spacing-x2;
   }
 }

@@ -1,0 +1,7 @@
+@import './variables';
+
+@mixin overflowed {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}

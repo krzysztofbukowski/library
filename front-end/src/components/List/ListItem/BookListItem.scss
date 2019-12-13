@@ -1,0 +1,28 @@
+@import "./../../../scss/variables";
+@import "../../../scss/utils.scss";
+
+.bookListItem {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.cover {
+  width: 37px;
+  height: 55px;
+  box-shadow: $shadow; 
+}
+
+.text{
+  padding-left: $spacing-x1;
+  max-width: 245px;
+}
+
+.title {
+  font-weight: bold;
+  @include overflowed;
+}
+
+.author {
+  @include overflowed;
+}
