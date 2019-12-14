@@ -5,7 +5,10 @@
   "scripts": {
     "lint:client": "npm run --prefix ./front-end lint",
     "lint:server": "npm run --prefix ./back-end lint",
+    "lint:fix:client": "npm run --prefix ./front-end lint:fix",
+    "lint:fix:server": "npm run --prefix ./back-end lint:fix",
     "lint": "run-p lint:client lint:server",
+    "lint:fix": "run-p lint:fix:client lint:fix:server",
     "start:client": "npm run --prefix ./front-end start",
     "start:server": "npm run --prefix ./back-end start",
     "start": "run-p start:server start:client",
