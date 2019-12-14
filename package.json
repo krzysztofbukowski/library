@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Project of digital library for primary school in Pieniezno.",
   "scripts": {
+    "lint:client": "npm run --prefix ./front-end lint",
+    "lint:server": "npm run --prefix ./back-end lint",
+    "lint": "run-p lint:client lint:server",
     "start:client": "npm run --prefix ./front-end start",
     "start:server": "npm run --prefix ./back-end start",
     "start": "run-p start:server start:client",
