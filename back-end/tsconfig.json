@@ -10,9 +10,10 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": [
-      "esnext"
+      "esnext",
+      "dom"
     ],
   },
-  "include": ["src/**/*"],
+  "include": ["api/**/*"],
   "exclude": ["node_modules"]
 }
