@@ -9,7 +9,7 @@ module.exports = {
   mode: process.env.NODE_ENV,
 
   entry: {
-    main: './front-end/src/index.tsx',
+    main: './src/index.tsx',
   },
 
   resolve: {
@@ -59,13 +59,6 @@ module.exports = {
         test: /\.(tsx?)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        options: {
-          presets: [
-            '@babel/preset-env',
-            '@babel/preset-react',
-            '@babel/preset-typescript',
-          ],
-        },
       },
     ],
   },
@@ -74,7 +67,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
       title: 'test',
-      template: 'front-end/index.html',
+      template: 'index.html',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash:5].css',

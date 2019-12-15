@@ -1,5 +1,4 @@
 .env
 node_modules
-build
 data
 docker-compose.override.yml
