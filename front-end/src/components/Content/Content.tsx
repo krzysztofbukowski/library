@@ -7,7 +7,7 @@ import List from '../List';
 import Book from '../../models/Book';
 import Reader from '../../models/Reader';
 
-import books from '../../__mocks__/Books'
+import books from '../../__mocks__/Books';
 import readers from '../../__mocks__/Readers';
 
 import ReaderListItem from '../List/ListItem/ReaderListItem';
