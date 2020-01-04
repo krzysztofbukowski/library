@@ -11,7 +11,7 @@ interface OwnProps {
 
 function ReaderListItem(props: OwnProps): JSX.Element {
   return (
-    <li>
+    <li data-testid="ReaderListItem">
       <div className={styles.readerListItem}>
         <img className={styles.avatarImg} src={props.avatarimg} alt="" />
         <div
