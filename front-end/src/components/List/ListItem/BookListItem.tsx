@@ -9,9 +9,9 @@ interface OwnProps {
   coverimg?: string;
 }
 
-function BookItemReader(props: OwnProps): JSX.Element {
+function BookListItem(props: OwnProps): JSX.Element {
   return (
-    <li>
+    <li data-testid="BookListItem">
       <div className={styles.bookListItem}>
         <img className={styles.cover} src={props.coverimg} alt="" />
         <div className={styles.text}>
@@ -23,4 +23,4 @@ function BookItemReader(props: OwnProps): JSX.Element {
   );
 }
 
-export default BookItemReader;
+export default BookListItem;

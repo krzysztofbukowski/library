@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.2",
@@ -63,11 +64,15 @@
     "webpack-dev-server": "^3.9.0"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
     "transform": {
-      "^.+\\.tsx?$": "babel-jest"
+      "^.+\\.(t|j)sx?$": "babel-jest"
     },
     "moduleNameMapper": {
-      ".scss": "identity-obj-proxy"
+      ".scss": "identity-obj-proxy",
+      ".(png|svg)": "<rootDir>/src/stubs/img.js"
     }
-  }    
+  }
 }

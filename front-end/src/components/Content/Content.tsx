@@ -7,11 +7,11 @@ import List from '../List';
 import Book from '../../models/Book';
 import Reader from '../../models/Reader';
 
-import books from '../../MockData/books';
-import readers from '../../MockData/readers';
+import books from '../../__mocks__/Books';
+import readers from '../../__mocks__/Readers';
 
 import ReaderListItem from '../List/ListItem/ReaderListItem';
-import BookItemReader from '../List/ListItem/BookListItem';
+import BookListItem from '../List/ListItem/BookListItem';
 
 import img from '../../assets/images/avatar.png';
 
@@ -38,7 +38,7 @@ const Content: React.FC = () => (
         title="Najnowsze książki"
         items={books}
         render={(book: Book): JSX.Element => (
-          <BookItemReader
+          <BookListItem
             key={book.id}
             id={book.id}
             title={book.title}
