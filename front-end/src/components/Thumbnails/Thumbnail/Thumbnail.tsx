@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-import * as styles from './Thumb.scss';
+import * as styles from './Thumbnail.scss';
+import Book from '../../../models/Book';
 
-const Thumb: React.FC = () => (
+const Thumb = (props: Book): JSX.Element => (
   <div className={styles.thumb}>
     <div className={styles.content}>
       <img
@@ -11,8 +12,8 @@ const Thumb: React.FC = () => (
         alt=""
       />
       <div className={styles.text}>
-        <h4 className={styles.textHeader}>Virion. Tom 4. Szermierz</h4>
-        <p className={styles.textParagraph}>Andrzej Ziemianski</p>
+        <h4 className={styles.textHeader}>{props.title}</h4>
+        <p className={styles.textParagraph}>{props.author}</p>
         <button className={styles.thumbButton}>BUTTON</button>
       </div>
     </div>

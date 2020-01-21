@@ -1,0 +1,24 @@
+@import "../../scss/variables";;
+
+.thumbs {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  flex-wrap: wrap;
+  max-width: 798px;
+  &Title {
+    flex-basis: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 87px;
+    text-align: center;
+    &Text {
+      margin: 0;
+    }
+  }
+  @media screen and (min-width: $content-width){
+    justify-content: space-between;
+    .thumbsTitle {
+      text-align: left;
+    }
+  }
+}

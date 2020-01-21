@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as styles from './Content.scss';
 
 import List from '../List';
-import Thumbs from '../Thumbs';
+import Thumbnails from '../Thumbnails';
 
 import Book from '../../models/Book';
 import Reader from '../../models/Reader';
@@ -19,7 +19,7 @@ import img from '../../assets/images/avatar.png';
 const Content: React.FC = () => (
   <>
     <main className={styles.main}>
-      <Thumbs />
+      <Thumbnails />
     </main>
     <aside className={styles.aside}>
       <List<Reader>
