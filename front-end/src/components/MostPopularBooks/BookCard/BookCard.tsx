@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import * as styles from './Thumbnail.scss';
+import * as styles from './BookCard.scss';
 import Book from '../../../models/Book';
 
-const Thumb = (props: Book): JSX.Element => (
-  <div className={styles.thumb}>
+const BookCard = (props: Book): JSX.Element => (
+  <div className={styles.BookCard}>
     <div className={styles.content}>
       <img
         className={styles.img}
@@ -14,10 +14,10 @@ const Thumb = (props: Book): JSX.Element => (
       <div className={styles.text}>
         <h4 className={styles.textHeader}>{props.title}</h4>
         <p className={styles.textParagraph}>{props.author}</p>
-        <button className={styles.thumbButton}>BUTTON</button>
+        <button className={styles.BookCardButton}>BUTTON</button>
       </div>
     </div>
   </div>
 );
 
-export default Thumb;
+export default BookCard;

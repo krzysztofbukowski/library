@@ -4,7 +4,16 @@
   width: 100%;
   @media screen and (min-width: $content-width) {
     max-width: $main-width;
+  }
+  &Header::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid black;
   } 
+  &Wrapper {
+    max-width: 798px;
+    margin: auto;
+  }
 }
 
 .aside {

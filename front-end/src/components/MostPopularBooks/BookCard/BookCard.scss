@@ -1,13 +1,14 @@
 
 @import "../../../scss/variables";
 
-.thumb {
+.BookCard {
   width: 384px;
   height: 213px;
   background: $color-white;
   box-shadow: $shadow;
   padding-left: 20px;
   margin-bottom: 65px;
+
   &Button {
     width: 119px;
     height: 41px;
@@ -35,9 +36,11 @@
  .text {
    padding-left: 20px;
    width: 100%;
+   
    &Header {
      margin: 20px 0 0 0;
    }
+
    &Paragraph {
      margin: 0 0 28px 0;
    }
