@@ -6,9 +6,13 @@ import BookCard from './BookCard';
 
 import Book from '../../models/Book';
 
-const MostPopularBooks: React.FC = ({ slicedBooks }) => (
+interface OwnProps {
+  books: Book[];
+}
+
+const MostPopularBooks: React.FC<OwnProps> = ({ books }) => (
   <div className={styles.MostPopularBooks}>
-    {slicedBooks.map((book: Book) => (
+    {books.map((book: Book) => (
       <BookCard
         id={book.id}
         key={book.id}

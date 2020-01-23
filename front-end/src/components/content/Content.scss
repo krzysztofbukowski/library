@@ -2,24 +2,19 @@
 
 .main {
   width: 100%;
-  @media screen and (min-width: $content-width) {
+  // @media screen and (min-width: $content-width) {
     max-width: $main-width;
-  }
+  // }
   &Header::after {
     content: '';
     display: block;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #707070;
   } 
-  &Wrapper {
-    max-width: 798px;
-    margin: auto;
-  }
 }
 
 .aside {
   width: 100%;
-  @media screen and (min-width: $content-width){
+  // @media screen and (min-width: $content-width){
     max-width: $aside-width;
-    margin-left: $spacing-x2;
-  }
+  // }
 }

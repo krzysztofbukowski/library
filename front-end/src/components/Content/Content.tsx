@@ -22,10 +22,8 @@ const Content: React.FC = () => {
   return (
     <>
       <main className={styles.main}>
-        <div className={styles.mainWrapper}>
-          <h3 className={styles.mainHeader}>Najpopularniejsze ksiazki</h3>
-          <MostPopularBooks slicedBooks={slicedBooks} />
-        </div>
+        <h3 className={styles.mainHeader}>Najpopularniejsze ksiazki</h3>
+        <MostPopularBooks books={slicedBooks} />
       </main>
       <aside className={styles.aside}>
         <List<Reader>
