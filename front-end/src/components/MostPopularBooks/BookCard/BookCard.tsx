@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as styles from './BookCard.scss';
 import Book from '../../../models/Book';
 
-import cover from '../../../assets/images/virion.jpg';
+import cover from '../../../assets/images/cover.jpg';
 
 const BookCard = (props: Book): JSX.Element => (
   <div className={styles.BookCard}>

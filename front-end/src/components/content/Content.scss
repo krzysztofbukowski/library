@@ -4,6 +4,7 @@
   width: 100%;
   // @media screen and (min-width: $content-width) {
     max-width: $main-width;
+    margin: auto;
   // }
   &Header::after {
     content: '';

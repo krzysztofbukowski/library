@@ -22,7 +22,7 @@ const Content: React.FC = () => {
   return (
     <>
       <main className={styles.main}>
-        <h3 className={styles.mainHeader}>Najpopularniejsze ksiazki</h3>
+        <h3 className={styles.mainHeader}>Najpopularniejsze książki</h3>
         <MostPopularBooks books={slicedBooks} />
       </main>
       <aside className={styles.aside}>
