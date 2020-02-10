@@ -2,10 +2,9 @@
 
 .main {
   width: 100%;
-  // @media screen and (min-width: $content-width) {
     max-width: $main-width;
     margin: auto;
-  // }
+
   &Header::after {
     content: '';
     display: block;
@@ -15,7 +14,5 @@
 
 .aside {
   width: 100%;
-  // @media screen and (min-width: $content-width){
-    max-width: $aside-width;
-  // }
+  max-width: $aside-width;
 }

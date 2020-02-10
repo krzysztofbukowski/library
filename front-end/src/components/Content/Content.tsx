@@ -17,13 +17,11 @@ import BookListItem from '../List/ListItem/BookListItem';
 import img from '../../assets/images/avatar.png';
 
 const Content: React.FC = () => {
-  const slicedBooks = books.slice(books.length - 8, books.length);
-
   return (
     <>
       <main className={styles.main}>
         <h3 className={styles.mainHeader}>Najpopularniejsze książki</h3>
-        <MostPopularBooks books={slicedBooks} />
+        <MostPopularBooks books={books} />
       </main>
       <aside className={styles.aside}>
         <List<Reader>
