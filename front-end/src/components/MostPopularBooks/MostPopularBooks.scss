@@ -1,0 +1,11 @@
+@import "../../scss/variables";;
+
+.MostPopularBooks{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 87px;
+  @media screen and (min-width: $content-width){
+    justify-content: space-between;
+  }
+}

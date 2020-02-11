@@ -2,17 +2,17 @@
 
 .main {
   width: 100%;
-  height: 1000px;
-  @media screen and (min-width: $content-width) {
     max-width: $main-width;
+    margin: auto;
+
+  &Header::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #707070;
   } 
 }
 
 .aside {
   width: 100%;
-  height: 1000px;
-  @media screen and (min-width: $content-width){
-    max-width: $aside-width;
-    margin-left: $spacing-x2;
-  }
+  max-width: $aside-width;
 }
