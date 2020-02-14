@@ -1,7 +1,6 @@
 import express, { Response, Request } from 'express';
 import { ParamsDictionary } from 'express-serve-static-core';
-import booksData from './__mock__/books.json';
-import Book from './models/Book';
+import { connect } from '../db';
 
 interface BookParam extends ParamsDictionary {
   bookId: string;
@@ -9,20 +8,26 @@ interface BookParam extends ParamsDictionary {
 
 const books = express.Router();
 
-books.get('/', (req: Request, res: Response) => {
-  res.send(booksData);
+books.get('/', async (req: Request, res: Response) => {
+  const connection = await connect();
+  connection.query('SELECT * FROM Book LIMIT 100', (error, results) => {
+    res.send(results).status(results.length > 0 ? 200 : 404);
+  });
 });
 
-books.get('/:bookId', (req: Request<BookParam>, res: Response) => {
-  const book: Book = booksData.find((item: Book) => {
-    return item._id === req.params.bookId;
-  });
-
-  if (book !== undefined) {
-    res.send(book);
-  } else {
-    res.sendStatus(404);
-  }
+books.get('/:bookId', async (req: Request<BookParam>, res: Response) => {
+  const bookId = parseInt(req.params.bookId, 10);
+  const connection = await connect();
+  connection.query(
+    `SELECT * FROM Book WHERE id = ${bookId} LIMIT 1`,
+    (error, results) => {
+      if (results.length > 0) {
+        res.send(results[0]);
+      } else {
+        res.status(404).send();
+      }
+    },
+  );
 });
 
 export default books;

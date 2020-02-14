@@ -1,11 +1,25 @@
+import { config } from 'dotenv';
+config();
+
 import express, { Express } from 'express';
 import api from './api/api';
+import { connect } from './db';
 
-const app: Express = express();
-const port = process.env.NODE_PORT || 5000;
-const startTime = new Date().getTime();
-const version = require('../package.json').version;
+(async function main() {
+  try {
+    const connection = await connect();
 
-app.use('/api', api(startTime, version));
+    const app: Express = express();
+    const port = process.env.NODE_PORT || 5000;
+    const startTime = new Date().getTime();
+    const version = require('../package.json').version;
 
-app.listen(port, () => console.info(`Server listening on port ${port}!`));
+    app.use('/api', api(startTime, version));
+
+    app.listen(port, () => {
+      console.info(`Server listening on port ${port}!`);
+    });
+  } catch (e) {
+    console.error(e);
+  }
+})();
