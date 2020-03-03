@@ -1,0 +1,57 @@
+@import "../../../scss/variables";
+
+.carouselItem:nth-child(odd) {
+  background: #0179E0;
+}
+
+.carouselItem:nth-child(even) {
+  background: #F5BD00;
+}
+
+.carousel {
+  &Item {
+    width: 650px;
+    height: 301px;
+    padding: $spacing-x2 0 0 $spacing-x4;
+    color: #EBEBEB;
+  }
+}
+
+.content {
+  display: flex;
+  height: 277px;
+
+  &Img {
+    width: 205px;
+    height: 325px;
+  }
+  
+  &Text {
+    flex: 1;
+    padding-left: 22px;
+  }
+
+  &Title {
+    margin: 6px 0 0 0;
+  }
+
+  &Author {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &Descryption {
+    margin: 35px 0 15px 0;
+  }
+
+  &Button {
+    background: $color-white;
+    border: none;
+    font-size: 24px;
+    box-shadow: 1px 1px 1px #00000066;
+    width: 229px;
+    height: 54px;
+    outline: none;
+    border-radius: 3px;
+  }
+}

@@ -1,5 +1,22 @@
 @import "../../scss/variables";
+@import "../../scss/utils.scss";
 
 .carousel {
   height: 360px;
+  overflow: hidden;
+  position: relative;
+
+  &PrevBtn {
+    @include verticallyAligned;
+  }
+
+  &NextBtn {
+   @include verticallyAligned;
+   right: 0;
+  }
+  
+  &Content {
+    display: flex; 
+    position: absolute;
+  }
 }
