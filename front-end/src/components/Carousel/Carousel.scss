@@ -8,15 +8,29 @@
 
   &PrevBtn {
     @include verticallyAligned;
+    margin-left: 5px;
+    height: 60px;
+    cursor: pointer;
   }
 
   &NextBtn {
    @include verticallyAligned;
-   right: 0;
+   margin-right: 5px;
+   right: 0; 
+   height: 60px;
+   cursor: pointer;
   }
   
   &Content {
     display: flex; 
-    position: absolute;
+    position: absolute;  
   }
+}
+
+.iconImg {
+  width: 60px;
+}
+
+.nextBtnIcon {
+  transform: rotate(180deg);
 }

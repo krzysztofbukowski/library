@@ -9,9 +9,13 @@ import Books from '../../__mocks__/Books.js';
 
 import Book from '../../models/Book';
 
+import iconPrev from '../../assets/icons/arrow_prev.svg';
+
+let isTransitionEnabled = false;
+
 const Carousel: React.FC = () => {
   const [offsetLeft, setOffsetLeft] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
+
   let carouselItemWidth;
 
   const carouselContentRef: React.RefObject<HTMLDivElement> = React.createRef();
@@ -33,30 +37,28 @@ const Carousel: React.FC = () => {
     return Math.round(carouselContentWidth / Books.length);
   };
 
-  useEffect((): void => {
-    setIsLoaded(true);
+  useEffect(() => {
+    setTimeout((): boolean => (isTransitionEnabled = true), 0);
 
     const itemWidth = getItemWidth();
     const windowWidth = window.innerWidth;
     const gap = (windowWidth - itemWidth) / 2;
-
     setOffsetLeft(gap);
   }, []);
 
   useEffect((): void => {
     const itemWidth = getItemWidth();
-
     carouselItemWidth = itemWidth;
   }, [offsetLeft]);
 
   const handleClickOnPrevBtn = (): void => {
     Books === addBookForStarters();
 
-    setOffsetLeft(offsetLeft - carouselItemWidth);
+    setOffsetLeft(temp => temp - carouselItemWidth);
   };
 
   const handleClickOnNextBtn = (): void => {
-    setOffsetLeft(offsetLeft + carouselItemWidth);
+    setOffsetLeft(temp => temp + carouselItemWidth);
   };
 
   return (
@@ -66,7 +68,7 @@ const Carousel: React.FC = () => {
         ref={carouselContentRef}
         style={{
           transform: `translateX(${offsetLeft}px)`,
-          transition: isLoaded ? 'transform 2s' : '',
+          transition: isTransitionEnabled ? 'transform 1.5s' : '',
         }}>
         {Books.map(
           (book): JSX.Element => (
@@ -77,16 +79,19 @@ const Carousel: React.FC = () => {
       </div>
       {Books.length <= 1 ? null : (
         <>
-          <button
-            onClick={(): void => handleClickOnPrevBtn()}
-            className={styles.carouselPrevBtn}>
-            lewa
-          </button>
-          <button
+          <div
             onClick={(): void => handleClickOnNextBtn()}
+            className={styles.carouselPrevBtn}>
+            <img className={styles.iconImg} src={iconPrev} />
+          </div>
+          <div
+            onClick={(): void => handleClickOnPrevBtn()}
             className={styles.carouselNextBtn}>
-            prawa
-          </button>
+            <img
+              className={`${styles.iconImg} ${styles.nextBtnIcon}`}
+              src={iconPrev}
+            />
+          </div>
         </>
       )}
     </div>
