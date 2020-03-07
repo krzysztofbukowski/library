@@ -14,8 +14,7 @@ jobs:
    - name: npm install and lint
      run: |
        npm ci
-       npm run lint:ts
-       npm run lint:scss
+       npm run lint
        npm t
      env:
        CI: true

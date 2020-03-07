@@ -6,10 +6,12 @@
   "scripts": {
     "lint:ts": "eslint --ext tsx --ext ts src",
     "lint:fix": "eslint --fix --ext tsx --ext ts src",
+    "lint:scss": "stylelint src/**/*.scss",
+    "lint": "eslint --fix --ext tsx --ext ts src & stylelint src/**/*.scss",
     "start": "webpack-dev-server",
     "build": "webpack",
-    "test": "jest",
-    "lint:scss": "stylelint src/**/*.scss"
+    "test": "jest"
+    
   },
   "repository": {
     "type": "git",
