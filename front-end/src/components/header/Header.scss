@@ -9,16 +9,16 @@
 
 .title {
   font-size: $font-size;
-  margin: 15px 0; 
+  margin: 15px 0;
+
   &Box {
     flex-basis: 50%;
   }
 }
 
- .searchBox {
+.searchBox {
   width: 350px;
   display: flex;
   align-items: center;
   font-size: $font-size;
 }
-
