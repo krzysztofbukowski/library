@@ -4,8 +4,11 @@
   "description": "Front-end application",
   "main": "src/index.tsx",
   "scripts": {
-    "lint": "eslint --ext tsx --ext ts src",
-    "lint:fix": "eslint --fix --ext tsx --ext ts src",
+    "lint": "npm run lint:ts && npm run lint:scss",
+    "lint:ts": "eslint --ext tsx --ext ts src",
+    "lint:ts:fix": "eslint --fix --ext tsx --ext ts src",
+    "lint:scss": "stylelint src/**/*.scss",
+    "lint:scss:fix": "stylelint src/**/*.scss --fix",  
     "start": "webpack-dev-server",
     "build": "webpack",
     "test": "jest"
@@ -58,6 +61,8 @@
     "node-sass": "^4.13.1",
     "prettier": "1.19.1",
     "sass-loader": "^8.0.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
