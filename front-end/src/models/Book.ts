@@ -3,4 +3,5 @@ export default interface Book {
   title: string;
   author: string;
   cover: string;
+  descryption?: string;
 }

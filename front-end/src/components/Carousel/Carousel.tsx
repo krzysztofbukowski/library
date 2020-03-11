@@ -71,8 +71,13 @@ const Carousel: React.FC = () => {
           transition: isTransitionEnabled ? 'transform 1.5s' : '',
         }}>
         {Books.map(
-          (book): JSX.Element => (
-            <CarouselItem key={book.id} />
+          (book: Book): JSX.Element => (
+            <CarouselItem
+              key={book.id}
+              title={book.title}
+              author={book.author}
+              descryption={book.descryption}
+            />
           ),
         )}
         ;
