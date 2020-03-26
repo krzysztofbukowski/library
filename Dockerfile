@@ -1,3 +1,3 @@
 FROM node:latest
 
-CMD [ "node -v" ] 
+CMD node -v
