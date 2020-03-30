@@ -1,5 +1,36 @@
 @import "../../scss/variables";
+@import "../../scss/utils.scss";
 
 .carousel {
   height: 360px;
+  overflow: hidden;
+  position: relative;
+
+  &PrevBtn {
+    @include verticallyAligned;
+    margin-left: 5px;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  &NextBtn {
+   @include verticallyAligned;
+   margin-right: 5px;
+   right: 0; 
+   height: 60px;
+   cursor: pointer;
+  }
+  
+  &Content {
+    display: flex; 
+    position: absolute;  
+  }
+}
+
+.iconImg {
+  width: 60px;
+}
+
+.nextBtnIcon {
+  transform: rotate(180deg);
 }
