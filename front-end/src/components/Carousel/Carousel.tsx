@@ -12,6 +12,8 @@ import Book from '../../models/Book';
 import iconPrev from '../../assets/icons/arrow_prev.svg';
 
 let isTransitionEnabled = false;
+const initialBooksLenght = Books.length;
+let indexOfClonedElement = 0;
 
 const Carousel: React.FC = () => {
   const [offsetLeft, setOffsetLeft] = useState(0);
@@ -22,13 +24,18 @@ const Carousel: React.FC = () => {
 
   const getContentWidth = (): number => carouselContentRef.current.offsetWidth;
 
-  const addBookForStarters = (): Book[] => {
-    const BookTable = Books;
-    const LastElement = Books.pop();
+  const addBookAtTheEnd = (): Book[] => {
+    const firstElement = Books[indexOfClonedElement];
 
-    BookTable.unshift(LastElement);
+    if (indexOfClonedElement === initialBooksLenght) {
+      indexOfClonedElement = 0;
+    }
 
-    return BookTable;
+    indexOfClonedElement++;
+
+    Books.push(firstElement);
+
+    return Books;
   };
 
   const getItemWidth = (): number => {
@@ -43,18 +50,20 @@ const Carousel: React.FC = () => {
     const itemWidth = getItemWidth();
     const windowWidth = window.innerWidth;
     const gap = (windowWidth - itemWidth) / 2;
+
     setOffsetLeft(gap);
   }, []);
 
   useEffect((): void => {
     const itemWidth = getItemWidth();
+
     carouselItemWidth = itemWidth;
   }, [offsetLeft]);
 
   const handleClickOnPrevBtn = (): void => {
-    Books === addBookForStarters();
-
     setOffsetLeft(temp => temp - carouselItemWidth);
+
+    addBookAtTheEnd();
   };
 
   const handleClickOnNextBtn = (): void => {
@@ -68,7 +77,7 @@ const Carousel: React.FC = () => {
         ref={carouselContentRef}
         style={{
           transform: `translateX(${offsetLeft}px)`,
-          transition: isTransitionEnabled ? 'transform 1.5s' : '',
+          transition: isTransitionEnabled ? 'transform 1s' : '',
         }}>
         {Books.map(
           (book: Book): JSX.Element => (
@@ -76,7 +85,7 @@ const Carousel: React.FC = () => {
               key={book.id}
               title={book.title}
               author={book.author}
-              descryption={book.descryption}
+              description={book.description}
             />
           ),
         )}

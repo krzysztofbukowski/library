@@ -14,6 +14,6 @@ test('Should render Carousel component', () => {
   const CarouselItems = getAllByTestId('CarouselItem').forEach((item, i) => {
     expect(item.textContent).toContain(books[i].title);
     expect(item.textContent).toContain(books[i].author);
-    expect(item.textContent).toContain(books[i].descryption);
+    expect(item.textContent).toContain(books[i].description);
   });
 });

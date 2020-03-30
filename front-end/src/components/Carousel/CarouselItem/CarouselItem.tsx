@@ -14,7 +14,7 @@ const CarouselItem = (props): JSX.Element => {
         <div className={styles.contentText}>
           <h4 className={styles.contentTitle}>{props.title} </h4>
           <p className={styles.contentAuthor}>{props.author}</p>
-          <p className={styles.contentDescryption}>{props.descryption}</p>
+          <p className={styles.contentDescription}>{props.description}</p>
           <button className={styles.contentButton}>BUTTON</button>
         </div>
       </div>
